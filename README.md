@@ -38,7 +38,7 @@ It sources environment variables from `.env`, which include:
 
 Explore Deno's capabilities regarding:
 
-[] Unit Tests
-[] Mocks
-[] Drun module (Deno Runner for development)
-[] Oak (Node's Koa-inspired middleware framework for web server)
+- [ ] Unit Tests
+- [ ] Mocks
+- [ ] Drun module (Deno Runner for development)
+- [ ] Oak (Node's Koa-inspired middleware framework for web server)
