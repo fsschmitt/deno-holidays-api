@@ -20,10 +20,10 @@ spec:
       containers:
         - env:
             - name: EXTERNAL_HOLIDAYS_API
-              value: "<EXTERNAL_HOLIDAYS_API>"
+              value: "https://date.nager.at/api/v2/publicholidays"
             - name: SERVER_PORT
-              value: 8080
-          image: "<IMAGE_REPO>"
+              value: "9090"
+          image: fsschmitt/deno-holiday-api:latest
           imagePullPolicy: IfNotPresent
           name: holiday-api
           ports:
