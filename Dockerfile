@@ -2,6 +2,9 @@ FROM hayd/alpine-deno:1.0.0
 
 WORKDIR /app
 
+# Add make support
+RUN apk update && apk add make
+
 # Prefer not to run as root.
 USER deno
 
@@ -15,4 +18,6 @@ ADD . .
 # Compile the main app so that it doesn't need to be compiled each startup/entry.
 RUN deno cache src/index.ts
 
-CMD ["run", "--allow-net", "--allow-env", "--allow-read", "src/index.ts"]
+ENTRYPOINT ["/bin/sh", "-c"]
+
+CMD ["make run"]
